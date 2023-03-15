@@ -1,0 +1,11 @@
+#! /bin/bash
+while [ "$VALOR" != 5 ]
+do
+	echo -e "1)\tMostrar la información actual de las conexiones de red
+	2)\tMostrar el contenido del archivo de configuración de las interfaces de red\n"
+	read -p "Introduce un valor: " VALOR
+	case $VALOR in
+		1) echo -e "uno";;
+		2) echo -e "dos";;
+	esac
+done
