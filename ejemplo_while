@@ -1,11 +1,69 @@
 #! /bin/bash
-while [ "$VALOR" != 5 ]
+
+net_show() {
+	ip a s
+}
+
+interface_show() {
+echo ""
+}
+
+user_show() {
+echo ""
+}
+
+mod_user() {
+echo ""
+}
+
+process_show() {	
+echo ""
+}
+
+mod_process() {
+echo ""
+}
+
+change_mod() {
+
+echo ""
+}
+
+change_own() {	
+echo ""
+}
+
+apt_update() {	
+echo ""
+}
+
+while [ "$VALOR" != 10 ]
 do
-	echo -e "1)\tMostrar la información actual de las conexiones de red
-	2)\tMostrar el contenido del archivo de configuración de las interfaces de red\n"
-	read -p "Introduce un valor: " VALOR
-	case $VALOR in
-		1) echo -e "uno";;
-		2) echo -e "dos";;
+	echo -e "\n\n"
+	echo -e "1)\tMostrar la información actual de las conexiones de red"
+	echo -e "2)\tMostrar el contenido del archivo de configuración de las interfaces de red"
+	echo -e "3)\tMostrar todos los usuarios existentes en tu sistema operativo"
+	echo -e "4)\tAgregar o eliminar un usuario en específico"
+	echo -e "5)\tMostrar la lista de todos los procesos que se encuentran en ejecución"
+	echo -e "6)\tEliminar/Detener un proceso en específico"
+	echo -e "7)\tCambiar los permisos a un archivo o directorio en específico"
+	echo -e "8)\tCambiar de propietario y/o grupo a un archivo o directorio en específico"
+	echo -e "9)\tActualizar los paquetes instalados y el sistema operativo"
+	echo -e "10\tSalir de la aplicación\n\n"
+
+	read -p "Ingrese el numero de la opcion: " VALOR
+	case $VALOR
+	in
+		1) net_show ;;
+		2) interface_show ;;
+		3) user_show ;;
+		4) mod_user ;;
+		5) process_show ;;
+		6) mod_process ;;
+		7) change_mod ;;
+		8) change_own ;;
+		9) apt_update ;;
+		10) echo "" ;;
 	esac
 done
+
